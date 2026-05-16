@@ -8,7 +8,7 @@ require (
 	github.com/google/go-intervals v0.0.2
 	github.com/jessevdk/go-flags v1.6.1
 	github.com/kr/pretty v0.3.1
-	github.com/pkg/diff v0.0.0-20210226163009-20ebb0f2a09e
+	github.com/pkg/diff v0.0.0-20241224192749-4e6772a4315c
 	github.com/rogpeppe/go-internal v1.12.0
 	github.com/stretchr/testify v1.9.0
 	go.uber.org/multierr v1.11.0
