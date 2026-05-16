@@ -156,6 +156,7 @@ func TestOffsetPos(t *testing.T) {
 				Path: &ast.BasicLit{
 					Value:    `"bar.git"`,
 					ValuePos: 34,
+					ValueEnd: 43,
 					Kind:     token.STRING,
 				},
 			}
