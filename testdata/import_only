@@ -1,0 +1,24 @@
+-- in.patch --
+@@
+@@
+-import . "gopkg.in/check.v1"
++import . "github.com/canonical/tc"
+
+-- simple.in.go --
+package foo
+
+import . "gopkg.in/check.v1"
+
+-- simple.diff --
+--- simple.go
++++ simple.go
+@@ -1,3 +1,3 @@
+ package foo
+ 
+-import . "gopkg.in/check.v1"
++import . "github.com/canonical/tc"
+
+-- simple.out.go --
+package foo
+
+import . "github.com/canonical/tc"
