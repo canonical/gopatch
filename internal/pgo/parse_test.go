@@ -188,6 +188,7 @@ func TestParse(t *testing.T) {
 							Rhs: []ast.Expr{
 								&ast.BasicLit{
 									ValuePos: 5,
+									ValueEnd: 10,
 									Kind:     token.STRING,
 									Value:    `"foo"`,
 								},
@@ -201,6 +202,7 @@ func TestParse(t *testing.T) {
 							Rhs: []ast.Expr{
 								&ast.BasicLit{
 									ValuePos: 20,
+									ValueEnd: 25,
 									Kind:     token.STRING,
 									Value:    `"bar"`,
 								},
