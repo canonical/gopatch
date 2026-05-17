@@ -116,13 +116,13 @@ func Parse(fset *token.FileSet, filename string, src []byte) (*File, error) {
 			case 0:
 				// If the body is empty, the user didn't provide anything
 				// after the package/imports.
-
+				if len(file.Imports) > 0 {
+					// Import-only patch: no body node needed.
+					return &file, nil
+				}
 				// TODO(abg): This should be the position after the package
 				// and imports.
 				return nil, fmt.Errorf("%v: expected a declaration or an expression, found EOF", adjuster.Position(body.Pos()))
-
-				// TODO(abg): We should support zero declarations for
-				// import/package-only transforms.
 			case 1:
 				// If the body contains a single expression, we want to do an
 				// expression transformation.

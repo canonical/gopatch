@@ -94,6 +94,10 @@ func (p *parser) parsePatchVersion(name string, f patchVersion) (*pgo.File, erro
 	}
 
 	// TODO: fill position data for lines before msrc.Node.
+	if pfile.Node == nil {
+		return pfile, nil
+	}
+
 	file := p.fset.File(pfile.Node.Pos())
 	for _, i := range f.Lines {
 		position := p.fset.Position(i.Pos)
